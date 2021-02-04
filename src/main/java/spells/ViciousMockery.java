@@ -2,8 +2,8 @@ package spells;
 
 public class ViciousMockery extends Spell{
 
-    public ViciousMockery(int spellSlotCost, int damage) {
-        super(spellSlotCost, damage);
+    public ViciousMockery() {
+        super(1, 4);
     }
 
     @Override

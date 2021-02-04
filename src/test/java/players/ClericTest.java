@@ -23,7 +23,7 @@ public class ClericTest {
 
     @Before
     public void setUp() {
-        spell = new GuidingBolt(1,6);
+        spell = new GuidingBolt();
         healingItem = new Potion();
         weapon = new Shortsword();
         player = new Rogue("Snek", 12, weapon);

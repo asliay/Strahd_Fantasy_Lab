@@ -2,8 +2,8 @@ package spells;
 
 public class GuidingBolt extends Spell{
 
-    public GuidingBolt(int spellSlotCost, int damage) {
-        super(spellSlotCost, damage);
+    public GuidingBolt() {
+        super(1, 6);
     }
 
     @Override

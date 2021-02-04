@@ -37,4 +37,9 @@ public class BarbarianTest {
         barbarian.attack(enemy);
         assertEquals(12, enemy.getHitPoints());
     }
+
+    @Test
+    public void canRage() {
+        assertEquals("You've flown into a rage!", barbarian.rage());
+    }
 }

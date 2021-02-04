@@ -17,8 +17,17 @@ public abstract class ArcaneCaster extends Player{
         return this.spellSlots;
     }
 
+    public void setSpellSlots(int spellSlots) {
+        this.spellSlots -= spellSlots;
+    }
+
+
     public ISpell getSpell() {
         return this.spell;
+    }
+
+    public void changeSpell(ISpell spell) {
+        this.spell = spell;
     }
 
     abstract void defend();

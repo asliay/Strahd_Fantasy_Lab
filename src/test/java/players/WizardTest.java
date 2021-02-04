@@ -1,6 +1,8 @@
 package players;
 
 import behaviours.ISpell;
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 import spells.Fireball;
@@ -11,9 +13,11 @@ public class WizardTest {
 
     private Wizard wizard;
     private ISpell spell;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
+        enemy = new Hag(20);
         spell = new Fireball();
         wizard = new Wizard("Kazamir", 13, 5, spell);
     }
@@ -40,6 +44,8 @@ public class WizardTest {
 
     @Test
     public void canCast() {
-        assertEquals("FIREBALL? ARE YOU CRAZY?", wizard.cast());
+        wizard.cast(enemy);
+        assertEquals(14, enemy.getHitPoints());
+        assertEquals(4, wizard.getSpellSlots());
     }
 }

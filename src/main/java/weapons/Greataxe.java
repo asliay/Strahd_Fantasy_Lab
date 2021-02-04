@@ -7,7 +7,7 @@ public class Greataxe implements IWeapon {
     private int damage;
 
     public Greataxe() {
-        this.damage = 6;
+        this.damage = 8;
     }
 
     @Override

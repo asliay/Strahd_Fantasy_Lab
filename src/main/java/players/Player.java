@@ -18,8 +18,8 @@ public abstract class Player {
         return hitPoints;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void raiseHitPoints(int hitPoints) {
+        this.hitPoints += hitPoints;
     }
 
     public void setName(String name) {

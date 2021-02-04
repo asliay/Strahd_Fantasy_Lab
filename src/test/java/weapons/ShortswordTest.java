@@ -19,11 +19,6 @@ public class ShortswordTest {
         assertEquals(6, shortsword.getDamage());
     }
 
-    @Test
-    public void canChangeDamage() {
-        shortsword.setDamage(10);
-        assertEquals(10, shortsword.getDamage());
-    }
 
     @Test
     public void attack() {

@@ -19,7 +19,7 @@ public class HealingWord implements IHeal {
     public void heal(Player player) {
         int playerHealth = player.getHitPoints();
         int newHealth = playerHealth + getHealPoints();
-        player.setHitPoints(newHealth);
+        player.raiseHitPoints(newHealth);
     }
 
 

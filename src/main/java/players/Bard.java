@@ -1,6 +1,7 @@
 package players;
 
 import behaviours.ISpell;
+import enemies.Enemy;
 import spells.ViciousMockery;
 
 public class Bard extends ArcaneCaster{
@@ -10,9 +11,12 @@ public class Bard extends ArcaneCaster{
 
     }
 
-    public String cast() {
+    public void cast(Enemy enemy){
         ISpell spell = getSpell();
-        return spell.cast();
+        int spellDamage = spell.getDamage();
+        enemy.takeDamage(spellDamage);
+        setSpellSlots(spell.getSpellSlotCost());
+
     }
 
     @Override

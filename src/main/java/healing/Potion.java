@@ -17,8 +17,6 @@ public class Potion implements IHeal {
 
     @Override
     public void heal(Player player) {
-        int playerHealth = player.getHitPoints();
-        int newHealth = playerHealth + getHealPoints();
-        player.setHitPoints(newHealth);
+        player.raiseHitPoints(healPoints);
     }
 }

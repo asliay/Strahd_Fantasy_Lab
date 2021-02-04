@@ -1,6 +1,8 @@
 package players;
 
 import behaviours.ISpell;
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 import spells.ViciousMockery;
@@ -11,10 +13,12 @@ public class BardTest {
 
     private Bard bard;
     private ISpell spell;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
-        spell = new ViciousMockery(1,4);
+        enemy = new Hag(20);
+        spell = new ViciousMockery();
         bard = new Bard("Eight", 16, 5, spell);
     }
 
@@ -40,6 +44,8 @@ public class BardTest {
 
     @Test
     public void canCast() {
-        assertEquals("Ouch! You cast Vicious Mockery. That was mean.", bard.cast());
+        bard.cast(enemy);
+        assertEquals(16, enemy.getHitPoints());
+        assertEquals(4, bard.getSpellSlots());
     }
 }

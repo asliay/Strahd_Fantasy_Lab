@@ -11,7 +11,7 @@ public class GuidingBoltTest {
 
     @Before
     public void setUp() {
-        guidingBolt = new GuidingBolt(1, 6);
+        guidingBolt = new GuidingBolt();
     }
 
     @Test
