@@ -1,3 +1,5 @@
+package players;
+
 import org.junit.Before;
 import org.junit.Test;
 import players.Barbarian;

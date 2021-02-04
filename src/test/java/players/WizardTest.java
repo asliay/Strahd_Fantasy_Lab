@@ -1,6 +1,7 @@
+package players;
+
 import org.junit.Before;
 import org.junit.Test;
-import players.Wizard;
 
 import static org.junit.Assert.assertEquals;
 

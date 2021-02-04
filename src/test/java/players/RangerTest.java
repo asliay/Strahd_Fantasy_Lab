@@ -1,7 +1,7 @@
+package players;
+
 import org.junit.Before;
 import org.junit.Test;
-import players.Barbarian;
-import players.Ranger;
 
 import static org.junit.Assert.assertEquals;
 
