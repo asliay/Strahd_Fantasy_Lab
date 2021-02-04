@@ -16,7 +16,7 @@ public class HealingWordTest {
     @Before
     public void setUp() {
         player = new Rogue("Snek", 12);
-        healingWord = new HealingWord(4);
+        healingWord = new HealingWord();
     }
 
     @Test

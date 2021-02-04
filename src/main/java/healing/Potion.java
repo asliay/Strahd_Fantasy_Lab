@@ -7,8 +7,8 @@ public class Potion implements IHeal {
 
     private int healPoints;
 
-    public Potion(int healPoints) {
-        this.healPoints = healPoints;
+    public Potion() {
+        this.healPoints = 3;
     }
 
     public int getHealPoints() {

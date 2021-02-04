@@ -7,8 +7,8 @@ public class HealingWord implements IHeal {
 
     private int healPoints;
 
-    public HealingWord(int healPoints) {
-        this.healPoints = healPoints;
+    public HealingWord() {
+        this.healPoints = 4;
     }
 
     public int getHealPoints() {

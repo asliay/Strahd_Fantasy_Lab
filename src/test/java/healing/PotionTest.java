@@ -15,7 +15,7 @@ public class PotionTest {
     @Before
     public void setUp() {
         player = new Rogue("Snek", 12);
-        potion = new Potion(3);
+        potion = new Potion();
     }
 
     @Test
