@@ -14,7 +14,7 @@ public class WizardTest {
 
     @Before
     public void setUp() {
-        spell = new Fireball(2, 8);
+        spell = new Fireball();
         wizard = new Wizard("Kazamir", 13, 5, spell);
     }
 
@@ -36,5 +36,10 @@ public class WizardTest {
     @Test
     public void hasSpell() {
         assertEquals(spell, wizard.getSpell());
+    }
+
+    @Test
+    public void canCast() {
+        assertEquals("FIREBALL? ARE YOU CRAZY?", wizard.cast());
     }
 }

@@ -11,7 +11,7 @@ public class LongbowTest {
 
     @Before
     public void setUp() {
-        longbow = new Longbow(6);
+        longbow = new Longbow();
     }
 
     @Test

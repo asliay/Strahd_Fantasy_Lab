@@ -4,8 +4,8 @@ package weapons;
 
 public class Longbow extends Weapon{
 
-    public Longbow(int damage) {
-        super(damage);
+    public Longbow() {
+        super(6);
     }
 
     @Override

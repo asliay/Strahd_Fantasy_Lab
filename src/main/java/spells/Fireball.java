@@ -2,8 +2,8 @@ package spells;
 
 public class Fireball extends Spell{
 
-    public Fireball(int spellSlotCost, int damage) {
-        super(spellSlotCost, damage);
+    public Fireball() {
+        super(1, 6);
     }
 
     @Override

@@ -9,6 +9,11 @@ public class Wizard extends ArcaneCaster{
         super(name, hitPoints, spellSlots, spell);
     }
 
+    public String cast(){
+        ISpell spell = getSpell();
+        return spell.cast();
+    }
+
     @Override
     void defend() {
 

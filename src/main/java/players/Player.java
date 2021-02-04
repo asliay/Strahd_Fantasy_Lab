@@ -18,11 +18,11 @@ public abstract class Player {
         return hitPoints;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
     }
 
-    public void healPlayer(int healPoints){
-        this.hitPoints += healPoints;
+    public void setName(String name) {
+        this.name = name;
     }
 }

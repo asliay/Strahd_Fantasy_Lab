@@ -11,12 +11,12 @@ public class ShortswordTest {
 
     @Before
     public void setUp() {
-        shortsword = new Shortsword(4);
+        shortsword = new Shortsword();
     }
 
     @Test
     public void hasDamage() {
-        assertEquals(4, shortsword.getDamage());
+        assertEquals(6, shortsword.getDamage());
     }
 
     @Test

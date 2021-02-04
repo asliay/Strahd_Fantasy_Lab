@@ -10,6 +10,11 @@ public class Bard extends ArcaneCaster{
 
     }
 
+    public String cast() {
+        ISpell spell = getSpell();
+        return spell.cast();
+    }
+
     @Override
     void defend() {
 

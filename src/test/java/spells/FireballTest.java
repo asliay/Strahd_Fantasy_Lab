@@ -11,17 +11,17 @@ public class FireballTest {
 
     @Before
     public void setUp() {
-        fireball = new Fireball(2, 8);
+        fireball = new Fireball();
     }
 
     @Test
     public void hasSpellSlotCost() {
-        assertEquals(2, fireball.getSpellSlotCost());
+        assertEquals(1, fireball.getSpellSlotCost());
     }
 
     @Test
     public void hasDamage() {
-        assertEquals(8, fireball.getDamage());
+        assertEquals(6, fireball.getDamage());
     }
 
     @Test

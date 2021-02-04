@@ -24,7 +24,24 @@ public class Cleric extends Player {
         return this.spell;
     }
 
+    public void setSpell(ISpell spell) {
+        this.spell = spell;
+    }
+
     public IHeal getHealingItem() {
         return this.healingItem;
+    }
+
+    public void setHealingItem(IHeal healingItem) {
+        this.healingItem = healingItem;
+    }
+
+    public void heal(Player player) {
+        this.healingItem.heal(player);
+    }
+
+    public String cast() {
+        ISpell spell = getSpell();
+        return spell.cast();
     }
 }

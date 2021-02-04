@@ -2,8 +2,8 @@ package weapons;
 
 public class Shortsword extends Weapon{
 
-    public Shortsword(int damage) {
-        super(damage);
+    public Shortsword() {
+        super(6);
     }
 
     @Override

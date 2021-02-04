@@ -4,8 +4,8 @@ import behaviours.IWeapon;
 
 public class Greataxe extends Weapon {
 
-    public Greataxe(int damage) {
-        super(damage);
+    public Greataxe() {
+        super(8);
     }
 
     @Override

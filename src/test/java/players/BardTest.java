@@ -37,4 +37,9 @@ public class BardTest {
     public void hasSpell() {
         assertEquals(spell, bard.getSpell());
     }
+
+    @Test
+    public void canCast() {
+        assertEquals("Ouch! You cast Vicious Mockery. That was mean.", bard.cast());
+    }
 }

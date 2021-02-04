@@ -17,7 +17,11 @@ public class HealingWord implements IHeal {
 
     @Override
     public void heal(Player player) {
-        player.healPlayer(getHealPoints());
+        int playerHealth = player.getHitPoints();
+        int newHealth = playerHealth + getHealPoints();
+        player.setHitPoints(newHealth);
     }
+
+
 
 }

@@ -11,7 +11,7 @@ public class GreataxeTest {
 
     @Before
     public void setUp() {
-        greataxe = new Greataxe(8);
+        greataxe = new Greataxe();
     }
 
     @Test
