@@ -7,7 +7,9 @@ public class Shortsword extends Weapon{
     }
 
     @Override
-    public void attack() {
-
+    public String attack() {
+        return "You attacked with the Shortsword!";
     }
+
+
 }

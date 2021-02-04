@@ -9,7 +9,8 @@ public class Longbow extends Weapon{
     }
 
     @Override
-    public void attack() {
-
+    public String attack() {
+        return "You attacked with the Longbow!";
     }
+
 }
