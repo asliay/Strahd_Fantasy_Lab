@@ -5,10 +5,9 @@ import spells.ViciousMockery;
 
 public class Bard extends ArcaneCaster{
 
-    private ViciousMockery viciousMockery;
+    public Bard(String name, int hitPoints, int spellSlots, ISpell spell) {
+        super(name, hitPoints, spellSlots, spell);
 
-    public Bard(String name, int hitPoints, int spellSlots) {
-        super(name, hitPoints, spellSlots);
     }
 
     @Override

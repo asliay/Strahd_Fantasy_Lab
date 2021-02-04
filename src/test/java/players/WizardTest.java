@@ -1,17 +1,21 @@
 package players;
 
+import behaviours.ISpell;
 import org.junit.Before;
 import org.junit.Test;
+import spells.Fireball;
 
 import static org.junit.Assert.assertEquals;
 
 public class WizardTest {
 
     private Wizard wizard;
+    private ISpell spell;
 
     @Before
     public void setUp() {
-        wizard = new Wizard("Kazamir", 13, 5);
+        spell = new Fireball(2, 8);
+        wizard = new Wizard("Kazamir", 13, 5, spell);
     }
 
     @Test
@@ -29,4 +33,8 @@ public class WizardTest {
         assertEquals(5, wizard.getSpellSlots());
     }
 
+    @Test
+    public void hasSpell() {
+        assertEquals(spell, wizard.getSpell());
+    }
 }

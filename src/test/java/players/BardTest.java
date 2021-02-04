@@ -1,17 +1,21 @@
 package players;
 
+import behaviours.ISpell;
 import org.junit.Before;
 import org.junit.Test;
+import spells.ViciousMockery;
 
 import static org.junit.Assert.assertEquals;
 
 public class BardTest {
 
     private Bard bard;
+    private ISpell spell;
 
     @Before
     public void setUp() {
-        bard = new Bard("Eight", 16, 5);
+        spell = new ViciousMockery(1,4);
+        bard = new Bard("Eight", 16, 5, spell);
     }
 
     @Test
@@ -27,5 +31,10 @@ public class BardTest {
     @Test
     public void hasSpellSlots() {
         assertEquals(5, bard.getSpellSlots());
+    }
+
+    @Test
+    public void hasSpell() {
+        assertEquals(spell, bard.getSpell());
     }
 }
