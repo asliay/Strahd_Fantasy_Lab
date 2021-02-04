@@ -22,7 +22,7 @@ public abstract class Player {
         this.name = name;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void healPlayer(int healPoints){
+        this.hitPoints += healPoints;
     }
 }

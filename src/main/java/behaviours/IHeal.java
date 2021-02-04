@@ -1,6 +1,8 @@
 package behaviours;
 
+import players.Player;
+
 public interface IHeal {
 
-    void heal();
+    void heal(Player player);
 }
