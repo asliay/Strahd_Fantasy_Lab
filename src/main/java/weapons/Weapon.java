@@ -11,7 +11,7 @@ public abstract class Weapon implements IWeapon {
     }
 
     public int getDamage() {
-        return damage;
+        return this.damage;
     }
 
     public void setDamage(int damage) {
