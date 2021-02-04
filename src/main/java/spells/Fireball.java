@@ -10,4 +10,5 @@ public class Fireball extends Spell{
     public String cast() {
         return "FIREBALL? ARE YOU CRAZY?";
     }
+
 }

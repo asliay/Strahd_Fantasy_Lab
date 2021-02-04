@@ -10,4 +10,5 @@ public class GuidingBolt extends Spell{
     public String cast() {
         return "Wow, you cast Guiding Bolt!";
     }
+
 }

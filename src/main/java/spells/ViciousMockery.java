@@ -10,4 +10,5 @@ public class ViciousMockery extends Spell{
     public String cast() {
         return "Ouch! You cast Vicious Mockery. That was mean.";
     }
+
 }
