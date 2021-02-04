@@ -19,11 +19,6 @@ public class LongbowTest {
         assertEquals(6, longbow.getDamage());
     }
 
-    @Test
-    public void canChangeDamage() {
-        longbow.setDamage(10);
-        assertEquals(10, longbow.getDamage());
-    }
 
     @Test
     public void attack() {

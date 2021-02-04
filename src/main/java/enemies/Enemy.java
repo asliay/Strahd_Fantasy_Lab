@@ -15,4 +15,9 @@ public abstract class Enemy {
     public void setHitPoints(int hitPoints) {
         this.hitPoints = hitPoints;
     }
+
+    public void takeDamage(int damage) {
+        this.hitPoints -= damage;
+    }
+
 }

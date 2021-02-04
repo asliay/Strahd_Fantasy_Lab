@@ -1,12 +1,12 @@
 package players;
 
+import behaviours.IWeapon;
+import enemies.Enemy;
+
 public class Rogue extends MartialClass {
-    public Rogue(String name, int hitPoints) {
-        super(name, hitPoints);
+
+    public Rogue(String name, int hitPoints, IWeapon weapon) {
+        super(name, hitPoints, weapon);
     }
 
-    @Override
-    void attack() {
-
-    }
 }

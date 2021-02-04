@@ -1,17 +1,25 @@
 package players;
 
+import behaviours.IWeapon;
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
+import weapons.Shortsword;
 
 import static org.junit.Assert.assertEquals;
 
 public class RogueTest {
 
     private Rogue rogue;
+    private IWeapon weapon;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
-        rogue = new Rogue("Snek", 16);
+        enemy = new Hag(20);
+        weapon = new Shortsword();
+        rogue = new Rogue("Snek", 16, weapon);
     }
 
     @Test
@@ -22,6 +30,12 @@ public class RogueTest {
     @Test
     public void hasHitPoints() {
         assertEquals(16, rogue.getHitPoints());
+    }
+
+    @Test
+    public void canAttack() {
+        rogue.attack(enemy);
+        assertEquals(14, enemy.getHitPoints());
     }
 
 }

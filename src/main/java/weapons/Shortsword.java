@@ -1,14 +1,23 @@
 package weapons;
 
-public class Shortsword extends Weapon{
+import behaviours.IWeapon;
+
+public class Shortsword implements IWeapon {
+
+    private int damage;
 
     public Shortsword() {
-        super(6);
+        this.damage = 6;
     }
 
     @Override
     public String attack() {
         return "You attacked with the Shortsword!";
+    }
+
+    @Override
+    public int getDamage() {
+        return this.damage;
     }
 
 

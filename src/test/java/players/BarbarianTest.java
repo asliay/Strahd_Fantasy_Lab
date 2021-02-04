@@ -1,18 +1,25 @@
 package players;
 
+import behaviours.IWeapon;
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
-import players.Barbarian;
+import weapons.Greataxe;
 
 import static org.junit.Assert.assertEquals;
 
 public class BarbarianTest {
 
     private Barbarian barbarian;
+    private IWeapon weapon;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
-        barbarian = new Barbarian("River", 20);
+        enemy = new Hag(20);
+        weapon = new Greataxe();
+        barbarian = new Barbarian("River", 20, weapon);
     }
 
     @Test
@@ -23,5 +30,11 @@ public class BarbarianTest {
     @Test
     public void hasHitPoints() {
         assertEquals(20, barbarian.getHitPoints());
+    }
+
+    @Test
+    public void canAttack() {
+        barbarian.attack(enemy);
+        assertEquals(12, enemy.getHitPoints());
     }
 }

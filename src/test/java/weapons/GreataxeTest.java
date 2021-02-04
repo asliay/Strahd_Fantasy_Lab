@@ -19,11 +19,6 @@ public class GreataxeTest {
         assertEquals(8, greataxe.getDamage());
     }
 
-    @Test
-    public void canChangeDamage() {
-        greataxe.setDamage(10);
-        assertEquals(10, greataxe.getDamage());
-    }
 
     @Test
     public void attack() {

@@ -2,27 +2,31 @@ package players;
 
 import behaviours.IHeal;
 import behaviours.ISpell;
+import behaviours.IWeapon;
 import healing.HealingWord;
 import healing.Potion;
 import org.junit.Before;
 import org.junit.Test;
 import spells.Fireball;
 import spells.GuidingBolt;
+import weapons.Shortsword;
 
 import static org.junit.Assert.assertEquals;
 
 public class ClericTest {
 
-    private Player player;
+    private Rogue player;
     private Cleric cleric;
     private ISpell spell;
     private IHeal healingItem;
+    private IWeapon weapon;
 
     @Before
     public void setUp() {
         spell = new GuidingBolt(1,6);
         healingItem = new Potion();
-        player = new Rogue("Snek", 12);
+        weapon = new Shortsword();
+        player = new Rogue("Snek", 12, weapon);
         cleric = new Cleric("Eg", 18, 5, spell, healingItem);
     }
 
