@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+
 public class Fireball extends Spell{
 
     public Fireball() {
@@ -7,8 +9,9 @@ public class Fireball extends Spell{
     }
 
     @Override
-    public String cast() {
-        return "FIREBALL? ARE YOU CRAZY?";
+    public void damage(Enemy enemy){
+        int spellDamage = getDamage();
+        enemy.takeDamage(spellDamage);
     }
 
 }

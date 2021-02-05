@@ -1,6 +1,7 @@
 package weapons;
 
 import behaviours.IWeapon;
+import enemies.Enemy;
 
 public class Shortsword implements IWeapon {
 
@@ -11,8 +12,9 @@ public class Shortsword implements IWeapon {
     }
 
     @Override
-    public String attack() {
-        return "You attacked with the Shortsword!";
+    public void damage(Enemy enemy){
+        int damage = getDamage();
+        enemy.takeDamage(damage);
     }
 
     @Override

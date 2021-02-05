@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+
 public class ViciousMockery extends Spell{
 
     public ViciousMockery() {
@@ -7,8 +9,9 @@ public class ViciousMockery extends Spell{
     }
 
     @Override
-    public String cast() {
-        return "Ouch! You cast Vicious Mockery. That was mean.";
+    public void damage(Enemy enemy){
+        int spellDamage = getDamage();
+        enemy.takeDamage(spellDamage);
     }
 
 }

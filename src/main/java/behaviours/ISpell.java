@@ -1,8 +1,10 @@
 package behaviours;
 
+import enemies.Enemy;
+
 public interface ISpell {
 
-    String cast();
+    void damage(Enemy enemy);
     int getDamage();
     int getSpellSlotCost();
 }

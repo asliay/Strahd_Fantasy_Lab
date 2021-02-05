@@ -2,6 +2,7 @@ package weapons;
 
 
 import behaviours.IWeapon;
+import enemies.Enemy;
 
 public class Longbow implements IWeapon {
 
@@ -12,8 +13,9 @@ public class Longbow implements IWeapon {
     }
 
     @Override
-    public String attack() {
-        return "You attacked with the Longbow!";
+    public void damage(Enemy enemy){
+        int damage = getDamage();
+        enemy.takeDamage(damage);
     }
 
     @Override

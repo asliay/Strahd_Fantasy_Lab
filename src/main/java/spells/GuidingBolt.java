@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+
 public class GuidingBolt extends Spell{
 
     public GuidingBolt() {
@@ -7,8 +9,9 @@ public class GuidingBolt extends Spell{
     }
 
     @Override
-    public String cast() {
-        return "Wow, you cast Guiding Bolt!";
+    public void damage(Enemy enemy){
+        int spellDamage = getDamage();
+        enemy.takeDamage(spellDamage);
     }
 
 }

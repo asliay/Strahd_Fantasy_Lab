@@ -1,6 +1,7 @@
 package weapons;
 
 import behaviours.IWeapon;
+import enemies.Enemy;
 
 public class Greataxe implements IWeapon {
 
@@ -11,8 +12,9 @@ public class Greataxe implements IWeapon {
     }
 
     @Override
-    public String attack() {
-        return "You attacked with the Greataxe!";
+    public void damage(Enemy enemy){
+        int damage = getDamage();
+        enemy.takeDamage(damage);
     }
 
     @Override

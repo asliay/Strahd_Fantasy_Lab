@@ -2,12 +2,12 @@ package players;
 
 import behaviours.ISpell;
 
-public abstract class ArcaneCaster extends Player{
+public abstract class Caster extends Player{
 
     private int spellSlots;
     private ISpell spell;
 
-    public ArcaneCaster(String name, int hitPoints, int spellSlots, ISpell spell) {
+    public Caster(String name, int hitPoints, int spellSlots, ISpell spell) {
         super(name, hitPoints);
         this.spellSlots = spellSlots;
         this.spell = spell;
@@ -20,7 +20,6 @@ public abstract class ArcaneCaster extends Player{
     public void setSpellSlots(int spellSlots) {
         this.spellSlots -= spellSlots;
     }
-
 
     public ISpell getSpell() {
         return this.spell;

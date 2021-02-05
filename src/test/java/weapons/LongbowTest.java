@@ -1,5 +1,7 @@
 package weapons;
 
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +10,12 @@ import static org.junit.Assert.*;
 public class LongbowTest {
 
     private Longbow longbow;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
         longbow = new Longbow();
+        enemy = new Hag(20);
     }
 
     @Test
@@ -21,8 +25,8 @@ public class LongbowTest {
 
 
     @Test
-    public void attack() {
-        String expected = longbow.attack();
-        assertEquals("You attacked with the Longbow!", expected);
+    public void canDamageEnemy() {
+        longbow.damage(enemy);
+        assertEquals(14, enemy.getHitPoints());
     }
 }

@@ -2,30 +2,15 @@ package players;
 
 import behaviours.IHeal;
 import behaviours.ISpell;
+import enemies.Enemy;
 
-public class Cleric extends Player {
+public class Cleric extends Caster {
 
-    private int spellSlots;
-    private ISpell spell;
     private IHeal healingItem;
 
     public Cleric(String name, int hitPoints, int spellSlots, ISpell spell, IHeal healingItem) {
-        super(name, hitPoints);
-        this.spellSlots = spellSlots;
-        this.spell = spell;
+        super(name, hitPoints,spellSlots, spell);
         this.healingItem = healingItem;
-    }
-
-    public int getSpellSlots() {
-        return spellSlots;
-    }
-
-    public ISpell getSpell() {
-        return this.spell;
-    }
-
-    public void setSpell(ISpell spell) {
-        this.spell = spell;
     }
 
     public IHeal getHealingItem() {
@@ -40,8 +25,15 @@ public class Cleric extends Player {
         this.healingItem.heal(player);
     }
 
-    public String cast() {
+    public void cast(Enemy enemy){
         ISpell spell = getSpell();
-        return spell.cast();
+        spell.damage(enemy);
+        int spellCost = spell.getSpellSlotCost();
+        setSpellSlots(spellCost);
+    }
+
+    @Override
+    void defend() {
+
     }
 }

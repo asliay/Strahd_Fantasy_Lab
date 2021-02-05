@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +10,12 @@ import static org.junit.Assert.*;
 public class GuidingBoltTest {
 
     private GuidingBolt guidingBolt;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
         guidingBolt = new GuidingBolt();
+        enemy = new Hag(20);
     }
 
     @Test
@@ -25,8 +29,8 @@ public class GuidingBoltTest {
     }
 
     @Test
-    public void canCast() {
-        String expected = guidingBolt.cast();
-        assertEquals("Wow, you cast Guiding Bolt!", expected);
+    public void canDamageEnemy() {
+        guidingBolt.damage(enemy);
+        assertEquals(14, enemy.getHitPoints());
     }
 }

@@ -16,6 +16,8 @@ public abstract class Spell implements ISpell {
         return this.spellSlotCost;
     }
 
+
+
     public int getDamage() {
         return this.damage;
     }

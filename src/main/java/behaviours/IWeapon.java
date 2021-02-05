@@ -4,6 +4,6 @@ import enemies.Enemy;
 
 public interface IWeapon {
 
-    String attack();
+    void damage(Enemy enemy);
     int getDamage();
 }

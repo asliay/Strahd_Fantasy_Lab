@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +10,12 @@ import static org.junit.Assert.*;
 public class FireballTest {
 
     private Fireball fireball;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
         fireball = new Fireball();
+        enemy = new Hag(20);
     }
 
     @Test
@@ -25,8 +29,8 @@ public class FireballTest {
     }
 
     @Test
-    public void canCast() {
-        String expected = fireball.cast();
-        assertEquals("FIREBALL? ARE YOU CRAZY?", expected);
+    public void canDamageEnemy() {
+        fireball.damage(enemy);
+        assertEquals(14, enemy.getHitPoints());
     }
 }

@@ -3,20 +3,18 @@ package players;
 import behaviours.ISpell;
 import enemies.Enemy;
 
-public class Wizard extends ArcaneCaster{
+public class Wizard extends Caster {
 
 
     public Wizard(String name, int hitPoints, int spellSlots, ISpell spell) {
         super(name, hitPoints, spellSlots, spell);
     }
 
-
     public void cast(Enemy enemy){
         ISpell spell = getSpell();
-        int spellDamage = spell.getDamage();
-        enemy.takeDamage(spellDamage);
-        setSpellSlots(spell.getSpellSlotCost());
-
+        spell.damage(enemy);
+        int spellCost = spell.getSpellSlotCost();
+        setSpellSlots(spellCost);
     }
 
     @Override

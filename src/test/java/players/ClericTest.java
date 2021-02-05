@@ -3,6 +3,8 @@ package players;
 import behaviours.IHeal;
 import behaviours.ISpell;
 import behaviours.IWeapon;
+import enemies.Enemy;
+import enemies.Hag;
 import healing.HealingWord;
 import healing.Potion;
 import org.junit.Before;
@@ -20,12 +22,14 @@ public class ClericTest {
     private ISpell spell;
     private IHeal healingItem;
     private IWeapon weapon;
+    private Enemy enemy;
 
     @Before
     public void setUp() {
         spell = new GuidingBolt();
         healingItem = new Potion();
         weapon = new Shortsword();
+        enemy = new Hag(20);
         player = new Rogue("Snek", 12, weapon);
         cleric = new Cleric("Eg", 18, 5, spell, healingItem);
     }
@@ -51,13 +55,6 @@ public class ClericTest {
     }
 
     @Test
-    public void canChangeSpell() {
-        ISpell newSpell = new Fireball();
-        cleric.setSpell(newSpell);
-        assertEquals(newSpell, cleric.getSpell());
-    }
-
-    @Test
     public void hasHealingItem() {
         assertEquals(healingItem, cleric.getHealingItem());
     }
@@ -77,7 +74,9 @@ public class ClericTest {
 
     @Test
     public void canCast() {
-        assertEquals("Wow, you cast Guiding Bolt!", cleric.cast());
+        cleric.cast(enemy);
+        assertEquals(14, enemy.getHitPoints());
+        assertEquals(4, cleric.getSpellSlots());
     }
 }
 

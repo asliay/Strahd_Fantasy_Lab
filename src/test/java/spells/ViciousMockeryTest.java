@@ -1,5 +1,7 @@
 package spells;
 
+import enemies.Enemy;
+import enemies.Hag;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +10,11 @@ import static org.junit.Assert.*;
 public class ViciousMockeryTest {
 
     private ViciousMockery viciousMockery;
-
+    private Enemy enemy;
     @Before
     public void setUp() {
         viciousMockery = new ViciousMockery();
+        enemy = new Hag(20);
     }
 
     @Test
@@ -25,8 +28,8 @@ public class ViciousMockeryTest {
     }
 
     @Test
-    public void canCast() {
-        String expected = viciousMockery.cast();
-        assertEquals("Ouch! You cast Vicious Mockery. That was mean.", expected);
+    public void canDamageEnemy() {
+        viciousMockery.damage(enemy);
+        assertEquals(16, enemy.getHitPoints());
     }
 }

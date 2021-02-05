@@ -21,7 +21,6 @@ public abstract class MartialClass extends Player {
     }
 
     public void attack(Enemy enemy){
-        int damage = weapon.getDamage();
-        enemy.takeDamage(damage);
+        weapon.damage(enemy);
     }
 }
