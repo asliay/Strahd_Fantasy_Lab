@@ -8,6 +8,7 @@ import org.junit.Test;
 import spells.ViciousMockery;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BardTest {
 
@@ -45,7 +46,6 @@ public class BardTest {
     @Test
     public void canCast() {
         bard.cast(enemy);
-        assertEquals(16, enemy.getHitPoints());
-        assertEquals(4, bard.getSpellSlots());
+        assertTrue(enemy.getHitPoints() < 20);
     }
 }

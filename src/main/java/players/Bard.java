@@ -10,13 +10,6 @@ public class Bard extends Caster {
 
     }
 
-    public void cast(Enemy enemy){
-        ISpell spell = getSpell();
-        spell.damage(enemy);
-        int spellCost = spell.getSpellSlotCost();
-        setSpellSlots(spellCost);
-    }
-
     @Override
     void defend() {
 

@@ -8,10 +8,4 @@ public class GuidingBolt extends Spell{
         super(1, 6);
     }
 
-    @Override
-    public void damage(Enemy enemy){
-        int spellDamage = getDamage();
-        enemy.takeDamage(spellDamage);
-    }
-
 }

@@ -25,12 +25,12 @@ public class FireballTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(6, fireball.getDamage());
+        assertEquals(6, fireball.getMaxDamage());
     }
 
     @Test
     public void canDamageEnemy() {
-        fireball.damage(enemy);
+        fireball.damage(enemy, 6);
         assertEquals(14, enemy.getHitPoints());
     }
 }

@@ -25,13 +25,6 @@ public class Cleric extends Caster {
         this.healingItem.heal(player);
     }
 
-    public void cast(Enemy enemy){
-        ISpell spell = getSpell();
-        spell.damage(enemy);
-        int spellCost = spell.getSpellSlotCost();
-        setSpellSlots(spellCost);
-    }
-
     @Override
     void defend() {
 

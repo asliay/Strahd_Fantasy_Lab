@@ -25,12 +25,12 @@ public class GuidingBoltTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(6, guidingBolt.getDamage());
+        assertEquals(6, guidingBolt.getMaxDamage());
     }
 
     @Test
     public void canDamageEnemy() {
-        guidingBolt.damage(enemy);
+        guidingBolt.damage(enemy, 6);
         assertEquals(14, enemy.getHitPoints());
     }
 }

@@ -24,12 +24,12 @@ public class ViciousMockeryTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(4, viciousMockery.getDamage());
+        assertEquals(4, viciousMockery.getMaxDamage());
     }
 
     @Test
     public void canDamageEnemy() {
-        viciousMockery.damage(enemy);
+        viciousMockery.damage(enemy, 4);
         assertEquals(16, enemy.getHitPoints());
     }
 }

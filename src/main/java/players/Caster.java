@@ -1,6 +1,7 @@
 package players;
 
 import behaviours.ISpell;
+import enemies.Enemy;
 
 public abstract class Caster extends Player{
 
@@ -17,8 +18,8 @@ public abstract class Caster extends Player{
         return this.spellSlots;
     }
 
-    public void setSpellSlots(int spellSlots) {
-        this.spellSlots -= spellSlots;
+    public void setSpellSlots(int spellCost) {
+        this.spellSlots -= spellCost;
     }
 
     public ISpell getSpell() {
@@ -30,4 +31,11 @@ public abstract class Caster extends Player{
     }
 
     abstract void defend();
+
+    public void cast(Enemy enemy){
+        int diceSides = spell.getMaxDamage();
+        int damageRoll = rollDice(1, diceSides);
+        spell.damage(enemy, damageRoll);
+        setSpellSlots(spell.getSpellSlotCost());
+    }
 }

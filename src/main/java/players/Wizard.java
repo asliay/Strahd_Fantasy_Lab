@@ -10,13 +10,6 @@ public class Wizard extends Caster {
         super(name, hitPoints, spellSlots, spell);
     }
 
-    public void cast(Enemy enemy){
-        ISpell spell = getSpell();
-        spell.damage(enemy);
-        int spellCost = spell.getSpellSlotCost();
-        setSpellSlots(spellCost);
-    }
-
     @Override
     void defend() {
 
