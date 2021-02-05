@@ -23,6 +23,7 @@ public abstract class Enemy {
     public void attack(Player player){
         player.takeDamage(attackDamage);
     }
+
     public void takeDamage(int damage) {
         this.hitPoints -= damage;
     }

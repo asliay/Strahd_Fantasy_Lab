@@ -20,12 +20,12 @@ public class ShortswordTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(6, shortsword.getDamage());
+        assertEquals(6, shortsword.getMaxDamage());
     }
 
     @Test
     public void canDamageEnemy() {
-        shortsword.damage(enemy);
+        shortsword.damage(enemy, 6);
         assertEquals(14, enemy.getHitPoints());
     }
 }

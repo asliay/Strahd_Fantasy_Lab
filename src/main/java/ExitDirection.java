@@ -1,4 +1,4 @@
-public enum Exit {
+public enum ExitDirection {
 
     NORTH,
     EAST,

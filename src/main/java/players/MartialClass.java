@@ -21,6 +21,8 @@ public abstract class MartialClass extends Player {
     }
 
     public void attack(Enemy enemy){
-        weapon.damage(enemy);
+        int diceSides = weapon.getMaxDamage();
+        int damageRoll = rollDice(1, diceSides);
+        weapon.damage(enemy, damageRoll);
     }
 }

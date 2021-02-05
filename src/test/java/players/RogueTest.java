@@ -8,6 +8,7 @@ import org.junit.Test;
 import weapons.Shortsword;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class RogueTest {
 
@@ -35,7 +36,7 @@ public class RogueTest {
     @Test
     public void canAttack() {
         rogue.attack(enemy);
-        assertEquals(14, enemy.getHitPoints());
+        assertTrue(enemy.getHitPoints() < 20);
     }
 
 }

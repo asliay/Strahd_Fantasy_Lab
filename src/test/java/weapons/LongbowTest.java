@@ -20,13 +20,13 @@ public class LongbowTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(6, longbow.getDamage());
+        assertEquals(6, longbow.getMaxDamage());
     }
 
 
     @Test
     public void canDamageEnemy() {
-        longbow.damage(enemy);
+        longbow.damage(enemy, 6);
         assertEquals(14, enemy.getHitPoints());
     }
 }

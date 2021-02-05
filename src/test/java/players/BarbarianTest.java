@@ -8,6 +8,7 @@ import org.junit.Test;
 import weapons.Greataxe;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BarbarianTest {
 
@@ -35,7 +36,7 @@ public class BarbarianTest {
     @Test
     public void canAttack() {
         barbarian.attack(enemy);
-        assertEquals(12, enemy.getHitPoints());
+        assertTrue(enemy.getHitPoints() < 20);
     }
 
     @Test

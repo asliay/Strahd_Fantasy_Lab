@@ -1,5 +1,7 @@
 package players;
 
+import java.util.Random;
+
 public abstract class Player {
 
     private String name;
@@ -28,5 +30,21 @@ public abstract class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int rollDice(int number, int nSides){
+        int num = 0;
+        Random r = new Random();
+        if (nSides >=3) {
+            for (int i = 0; i < number; i++) {
+                int roll = r.nextInt(nSides) + 1;
+                System.out.println("You rolled: " + roll);
+                num = num + roll;
+            }
+        }
+        else {
+                System.out.println("Error: dice must have more than 3 sides");
+        }
+        return num;
     }
 }

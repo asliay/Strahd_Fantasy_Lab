@@ -20,13 +20,13 @@ public class GreataxeTest {
 
     @Test
     public void hasDamage() {
-        assertEquals(8, greataxe.getDamage());
+        assertEquals(8, greataxe.getMaxDamage());
     }
 
 
     @Test
     public void canDamageEnemy() {
-        greataxe.damage(enemy);
+        greataxe.damage(enemy, 8);
         assertEquals(12, enemy.getHitPoints());
     }
 }
