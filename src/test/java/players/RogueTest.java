@@ -17,7 +17,7 @@ public class RogueTest {
 
     @Before
     public void setUp() {
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         weapon = new Shortsword();
         rogue = new Rogue("Snek", 16, weapon);
     }

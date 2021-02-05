@@ -17,7 +17,7 @@ public class WizardTest {
 
     @Before
     public void setUp() {
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         spell = new Fireball();
         wizard = new Wizard("Kazamir", 13, 5, spell);
     }

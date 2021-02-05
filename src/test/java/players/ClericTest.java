@@ -29,7 +29,7 @@ public class ClericTest {
         spell = new GuidingBolt();
         healingItem = new Potion();
         weapon = new Shortsword();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         player = new Rogue("Snek", 12, weapon);
         cleric = new Cleric("Eg", 18, 5, spell, healingItem);
     }

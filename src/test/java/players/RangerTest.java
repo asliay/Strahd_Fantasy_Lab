@@ -18,7 +18,7 @@ public class RangerTest {
     @Before
     public void setUp() {
         weapon = new Longbow();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         ranger = new Ranger("Page", 17, weapon);
     }
 

@@ -22,6 +22,10 @@ public abstract class Player {
         this.hitPoints += hitPoints;
     }
 
+    public void takeDamage(int damage) {
+        this.hitPoints -= damage;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

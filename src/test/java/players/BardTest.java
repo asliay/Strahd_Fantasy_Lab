@@ -17,7 +17,7 @@ public class BardTest {
 
     @Before
     public void setUp() {
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         spell = new ViciousMockery();
         bard = new Bard("Eight", 16, 5, spell);
     }

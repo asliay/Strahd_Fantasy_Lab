@@ -15,7 +15,7 @@ public class ShortswordTest {
     @Before
     public void setUp() {
         shortsword = new Shortsword();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

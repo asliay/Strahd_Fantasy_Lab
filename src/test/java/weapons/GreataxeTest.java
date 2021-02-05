@@ -15,7 +15,7 @@ public class GreataxeTest {
     @Before
     public void setUp() {
         greataxe = new Greataxe();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

@@ -15,7 +15,7 @@ public class GuidingBoltTest {
     @Before
     public void setUp() {
         guidingBolt = new GuidingBolt();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

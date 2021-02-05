@@ -15,7 +15,7 @@ public class FireballTest {
     @Before
     public void setUp() {
         fireball = new Fireball();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

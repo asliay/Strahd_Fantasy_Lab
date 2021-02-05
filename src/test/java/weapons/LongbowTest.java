@@ -15,7 +15,7 @@ public class LongbowTest {
     @Before
     public void setUp() {
         longbow = new Longbow();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

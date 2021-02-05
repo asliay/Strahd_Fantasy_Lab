@@ -2,8 +2,8 @@ package enemies;
 
 public class Werewolf extends Enemy{
 
-    public Werewolf(int hitPoints) {
-        super(hitPoints);
-    }
 
+    public Werewolf(int hitPoints, int attackDamage) {
+        super(hitPoints, attackDamage);
+    }
 }

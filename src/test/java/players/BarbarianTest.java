@@ -17,7 +17,7 @@ public class BarbarianTest {
 
     @Before
     public void setUp() {
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
         weapon = new Greataxe();
         barbarian = new Barbarian("River", 20, weapon);
     }

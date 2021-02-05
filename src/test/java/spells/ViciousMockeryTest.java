@@ -14,7 +14,7 @@ public class ViciousMockeryTest {
     @Before
     public void setUp() {
         viciousMockery = new ViciousMockery();
-        enemy = new Hag(20);
+        enemy = new Hag(20, 8);
     }
 
     @Test

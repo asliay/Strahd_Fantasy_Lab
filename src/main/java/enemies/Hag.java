@@ -2,9 +2,7 @@ package enemies;
 
 public class Hag extends Enemy{
 
-    public Hag(int hitPoints) {
-        super(hitPoints);
+    public Hag(int hitPoints, int attackDamage) {
+        super(hitPoints, attackDamage);
     }
-
-
 }
